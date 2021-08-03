@@ -1,4 +1,4 @@
-import Chance from 'chance';
+//import Chance from 'Chance';
 import SearchResultsPage from "../../page-objects/searchResultsPage";
 import accessoriesPage from "../../page-objects/accessoriesPage";
 
