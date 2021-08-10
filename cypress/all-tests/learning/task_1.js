@@ -91,14 +91,14 @@ mySet.add('RUB');
 
 
 //////////TASK_6/////////////
-it('TASK_6 ', function () {
-
-    let setA = new Set([1, 2, 3, 4]),
-    setB = new Set([2, 3]),
-    setC = new Set([3, 4, 5, 6]);
-
-    cy.log(isSuperSet(setA, setB));
-    cy.log(intersection(setA, setC));
-    cy.log(union(setA, setC));
-    cy.log(difference(setA, setC));
-})
+// it('TASK_6 ', function () {
+//
+//     let setA = new Set([1, 2, 3, 4]),
+//     setB = new Set([2, 3]),
+//     setC = new Set([3, 4, 5, 6]);
+//
+//     cy.log(isSuperSet(setA, setB));
+//     cy.log(intersection(setA, setC));
+//     cy.log(union(setA, setC));
+//     cy.log(difference(setA, setC));
+// })
