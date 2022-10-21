@@ -24,7 +24,7 @@ jobs:
     - name: Condition1 
       if: ${{ github.event.inputs.environment == 'Stage' }}
       env:
-        SUPER_SECRET: ${{ secrets.TESR_1 }}
+        SUPER_SECRET: ${{ secrets.TEST_2 }}
       run: |
         if ["$SUPER_SECRET" == "TEST"]
         then 
