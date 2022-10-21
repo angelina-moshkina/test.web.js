@@ -26,7 +26,7 @@ jobs:
       env:
         SUPER_SECRET: ${{ secrets.TESR_1 }}
       run: |
-        if ["$SUPER_SECRET" == "not"]
+        if ["$SUPER_SECRET" == "TEST"]
         then 
           echo "Hello correct"
         fi
