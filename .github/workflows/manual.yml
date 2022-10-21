@@ -23,11 +23,11 @@ jobs:
     # Runs a single command using the runners shell
     - name: Condition1 
       if: ${{ github.event.inputs.environment == 'Stage' }}
-      env:
-        SUPER_SECRET: ${{ secrets.TEST_2 }}
-        if: $SUPER_SECRET == "123"
-        run: |
-          echo "Hello correct"
+        - env:
+            SUPER_SECRET: ${{ secrets.TEST_2 }}
+          if: $SUPER_SECRET == "123"
+          run: |
+            echo "Hello correct"
       
     - name: Condition2
       if: ${{ github.event.inputs.environment == 'Demo' }}
