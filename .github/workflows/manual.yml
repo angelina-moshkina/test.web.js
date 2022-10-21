@@ -24,9 +24,9 @@ jobs:
     - name: Condition1 
       if: ${{ github.event.inputs.environment == 'Stage' }}
       env:
-        SECRET: ${{ secrets.TEST_2 }}
+        SUPER_SECRET: ${{ secrets.TESR_1 }}
       run: |
-        if ["$SECRET" == "not"]
+        if ["$SUPER_SECRET" == "not"]
         then 
           echo "Hello correct"
         fi
