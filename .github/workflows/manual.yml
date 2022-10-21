@@ -9,7 +9,7 @@ on:
     inputs:
       environment:
         description: 'Environment to run tests against'
-        type: environment [demo]
+        type: environment
         required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -23,7 +23,13 @@ jobs:
     # Runs a single command using the runners shell
     - name: Condition1 
       if: ${{ github.event.inputs.environment == 'Stage' }}
-      run: echo "Hello ${{ github.event.inputs.environment }}"
+      run: |
+        if ["$SECRET" == "TEST"]
+        then 
+          echo "Hello correct"
+        fi
+      env:
+        SECRET: ${{ secrets.TESR_1 }}
     - name: Condition2
       if: ${{ github.event.inputs.environment == 'Demo' }}
       run: echo "Hello ${{ github.event.inputs.environment }}"
