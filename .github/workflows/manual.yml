@@ -24,7 +24,7 @@ jobs:
     - name: Condition1 
       if: ${{ github.event.inputs.environment == 'Stage' }}
       run: |
-        if ["$SECRET" == "TEST"]
+        if ["$SECRET" == "TEST2"]
         then 
           echo "Hello correct"
         fi
