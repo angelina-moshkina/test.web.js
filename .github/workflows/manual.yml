@@ -23,13 +23,14 @@ jobs:
     # Runs a single command using the runners shell
     - name: Condition1 
       if: ${{ github.event.inputs.environment == 'Stage' }}
+      env:
+        SECRET: ${{ secrets.TEST_2 }}
       run: |
-        if ["$SECRET" == "TEST2"]
+        if ["$SECRET" == "not"]
         then 
           echo "Hello correct"
         fi
-      env:
-        SECRET: ${{ secrets.TEST_2 }}
+      
     - name: Condition2
       if: ${{ github.event.inputs.environment == 'Demo' }}
       run: echo "Hello ${{ github.event.inputs.environment }}"
