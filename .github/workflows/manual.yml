@@ -19,18 +19,13 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
         # Steps represent a sequence of tasks that will be executed as part of the job
-    if: ${{ github.event.inputs.environment == 'Stage' }}
     steps:
     # Runs a single command using the runners shell
     - name: Condition1 
-      env:
-        SUPER_SECRET: ${{ secrets.TEST_2 }}
-      if: $SUPER_SECRET == "123"
-      run: |
-        echo "Hello correct"
-    #steps:  
-   # - name: Condition2
-    #  if: ${{ github.event.inputs.environment == 'Demo' }}
-     # run: echo "Hello ${{ github.event.inputs.environment }}"
+      if: ${{ github.event.inputs.environment == 'STAGE' }}
+      run: echo "Hello correct"
+    - name: Condition2
+      if: ${{ github.event.inputs.environment == 'Demo' }}
+      run: echo "Hello ${{ github.event.inputs.environment }}"
 
         
