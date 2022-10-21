@@ -6,12 +6,10 @@ name: Manual workflow
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
     inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Input has to be provided for the workflow to run
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
         required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
