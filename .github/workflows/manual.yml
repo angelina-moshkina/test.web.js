@@ -29,7 +29,7 @@ jobs:
           echo "Hello correct"
         fi
       env:
-        SECRET: ${{ secrets.TESR_1 }}
+        SECRET: ${{ secrets.TEST_2 }}
     - name: Condition2
       if: ${{ github.event.inputs.environment == 'Demo' }}
       run: echo "Hello ${{ github.event.inputs.environment }}"
