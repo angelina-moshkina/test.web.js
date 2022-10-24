@@ -21,5 +21,5 @@ jobs:
         run: npm install
       - name: Running tests
         run: |
-            repo-token: ${{ secrets.STAGE_AF }}
+            repo-token: ${{ secrets.TESR_1 }}
             echo "Hello ${{ repo-token }}"
