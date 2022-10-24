@@ -1,0 +1,25 @@
+name: Running the basic test
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+jobs:
+  build:
+    runs-on: windows-latest
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Install
+        run: npm install
+      - name: Running tests
+        run: |
+            repo-token: ${{ secrets.STAGE_AF }}
+            echo "Hello ${{ repo-token }}"
