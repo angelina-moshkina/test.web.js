@@ -22,4 +22,4 @@ jobs:
       - name: Running tests
         run: |
             repo-token: ${{ secrets.TESR_1 }}
-            echo "Hello ${{ repo-token }}"
+            echo "Hello "
